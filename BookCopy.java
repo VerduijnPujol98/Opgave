@@ -20,7 +20,12 @@ public class BookCopy {
         return false;
     }
 
-    public void returnBook() {
-        borrowed = false;
+    public boolean returnBook() {
+        if (borrowed) {
+            borrowed = false;
+            return true;
+        }
+
+        return false;
     }
 }
